@@ -163,3 +163,197 @@
 //   return result.join('');
 // }
 // console.log(szyfr(haslo));
+
+
+// FORMULARZE
+
+
+// const goscie = document.getElementById('text1')
+// const poprawiny = document.getElementById('checkbox1')
+// const result = document.getElementById('wynik1')
+
+// const oblicz = () => {
+//   let wynik = +goscie.value * 100
+//   if(poprawiny.checked){
+//     wynik *= 1.3
+//   }
+//   result.textContent = wynik
+//   console.log(wynik);
+// }
+// goscie.addEventListener('change', oblicz)
+// poprawiny.addEventListener('change', oblicz)
+
+// const kilometry = document.getElementById('text1')
+// const jestemZ = document.getElementById('checkbox1')
+// const result = document.getElementById('wynik1')
+
+// const oblicz = () => {
+//   let wynik = +kilometry.value * 2
+//   if(jestemZ.checked){
+//     result.textContent = "dowiezeimy za friko"
+//   }else{
+//     result.textContent =  `Dowóz będzie cię kosztował ${wynik}zł`
+//   }
+// }
+// kilometry.addEventListener('change', oblicz)
+// jestemZ.addEventListener('change', oblicz)
+
+// const a = document.getElementById('a')
+// const b = document.getElementById('b')
+// const wynik = document.getElementById('wynik')
+
+// const guziki = document.querySelectorAll('button')
+
+// const oblicz = (a, b, callback) => callback(a, b) 
+// const fdodawanie = (a, b) => wynik.textContent = a + b 
+// const fodejmowanie = (a, b) => wynik.textContent = a - b
+// const fmnozenie = (a, b) => wynik.textContent = a * b 
+// const fdzielenie = (a, b) => wynik.textContent = a / b 
+// const freszta = (a, b) => wynik.textContent = a % b
+// const fcalkowite = (a, b) => wynik.textContent = Math.round(a / b) 
+
+// guziki.forEach(guzik => {
+//     guzik.addEventListener('click', () => {
+//     if(guzik.id == 'dodawanie'){
+//     oblicz(+a.value,+b.value,fdodawanie)
+//     } else if(guzik.id == 'odejmowanie'){
+//       oblicz(+a.value,+b.value,fodejmowanie)
+//     } else if(guzik.id == 'mnozenie'){
+//       oblicz(+a.value,+b.value,fmnozenie)
+//     } else if(guzik.id == 'dzielenie'){
+//       oblicz(+a.value,+b.value,fdzielenie)
+//     } else if(guzik.id == 'reszta'){
+//       oblicz(+a.value,+b.value,freszta)
+//     } else if(guzik.id == 'calkowite'){
+//       oblicz(+a.value,+b.value,fcalkowite)
+//     }
+//   })
+// })
+
+
+// const wynikDisplay = document. getElementById('wynik')
+
+// const oblicz = () => {
+//   const first = parseInt(document.getElementById('first').value)
+//   const second = parseInt(document.getElementById('second').value)
+//   const third = parseInt(document.getElementById('third').value)
+//   const fourth = parseInt(document.getElementById('fourth').value)
+//   const fifth = parseInt(document.getElementById('fifth').value)
+
+//   const checkbox1 = document.getElementById('checkbox1')
+//   const checkbox2 = document.getElementById('checkbox2')
+//   const checkbox3 = document.getElementById('checkbox3')
+//   const checkbox4 = document.getElementById('checkbox4')
+//   const checkbox5 = document.getElementById('checkbox5')
+
+//   let wynik = 0
+
+//   if(checkbox1.checked){
+//     wynik += first
+//   }
+  
+//   if(checkbox2.checked){
+//     wynik += second
+//   }
+  
+//   if(checkbox3.checked){
+//     wynik += third
+//   }
+  
+//   if(checkbox4.checked){
+//     wynik += fourth
+//   }
+  
+//   if(checkbox5.checked){
+//     wynik += fifth
+//   }
+
+//   wynikDisplay.textContent = wynik
+// }
+
+// const checkboxy = document.querySelectorAll('input[type="checkbox"]')
+// checkboxy.forEach(check => {
+//   check.addEventListener('change', () => {
+//     oblicz()
+//   })
+// })
+
+
+// const button = document.getElementById('btn')
+// const wynik = document.getElementById('wynik')  
+
+// const oblicz = () => {
+//   const ogloszenia = parseInt(document.getElementById('text').value)
+//   const stalyKlient = document.getElementById('checkbox')
+//   let cena = 0
+//   if(ogloszenia <= 50){
+//     cena = ogloszenia * 2
+//   }else if(ogloszenia <= 100){
+//     cena = ogloszenia * 1.5
+//   }else{
+//     cena = ogloszenia * 1
+//   }
+
+//   if(stalyKlient.checked){
+//     cena *= 0.8
+//   }
+//   wynik.textContent = cena
+// }
+
+// button.addEventListener('click', oblicz)
+
+
+// const button = document.getElementById('btn')
+// const wynik = document.getElementById('wynik')  
+
+// const oblicz = () => {
+//   const cegly = parseInt(document.getElementById('text').value)
+//   const km = parseInt(document.getElementById('km').value)
+//   const premium = document.getElementById('checkbox')
+//   let cena = 0
+//   let waga = 0
+
+
+//   if(premium.checked){
+//     cena = cegly * 2.60
+//     waga = cegly * 1.75
+//     let transport = (Math.floor(waga / 10) * 0.5) * km
+//     wynik.textContent = `Zakupiona ilość cegieł: ${cegly}, cegła premium, koszt zakupu cegieł ${cena}, waga cegieł ${waga}, koszt transportu ${transport}`
+//   }else{
+//     cena = cegly * 2
+//     waga = cegly * 1.5
+//     let transport = (Math.floor(waga / 10) * 0.5) * km
+//     wynik.textContent = `Zakupiona ilość cegieł: ${cegly}, cegła standardowa, koszt zakupu cegieł ${cena}, waga cegieł ${waga}, koszt transportu ${transport}`
+//   }
+// }
+// button.addEventListener('click', oblicz)
+
+
+const button = document.getElementById('btn')
+const wynik = document.getElementById('wynik')  
+
+const oblicz = () => {
+  const normalne = parseInt(document.getElementById('normalne').value)
+  const ulgowe = parseInt(document.getElementById('ulgowe').value)
+  const godziny = parseInt(document.getElementById('godziny').value)
+
+  const kartaRodziny = document.getElementById('checkbox')
+
+  let cenaNormalnych = normalne * 10 * godziny
+  let cenaUlgowych = ulgowe * 5 * godziny
+  if(godziny > 4){
+    cenaNormalnych = 50
+    cenaUlgowych = 25
+  }
+  if(ulgowe % 15 == 0){
+    cenaNormalnych -= 10
+  }
+  let cena = cenaNormalnych + cenaUlgowych
+  
+  if(kartaRodziny.checked){
+    cena *= 0.9
+  }
+  wynik.textContent = cena
+}
+
+button.addEventListener('click', oblicz)
