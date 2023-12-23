@@ -329,31 +329,31 @@
 // button.addEventListener('click', oblicz)
 
 
-const button = document.getElementById('btn')
-const wynik = document.getElementById('wynik')  
+// const button = document.getElementById('btn')
+// const wynik = document.getElementById('wynik')  
 
-const oblicz = () => {
-  const normalne = parseInt(document.getElementById('normalne').value)
-  const ulgowe = parseInt(document.getElementById('ulgowe').value)
-  const godziny = parseInt(document.getElementById('godziny').value)
+// const oblicz = () => {
+//   const normalne = parseInt(document.getElementById('normalne').value)
+//   const ulgowe = parseInt(document.getElementById('ulgowe').value)
+//   const godziny = parseInt(document.getElementById('godziny').value)
 
-  const kartaRodziny = document.getElementById('checkbox')
+//   const kartaRodziny = document.getElementById('checkbox')
 
-  let cenaNormalnych = normalne * 10 * godziny
-  let cenaUlgowych = ulgowe * 5 * godziny
-  if(godziny > 4){
-    cenaNormalnych = 50
-    cenaUlgowych = 25
-  }
-  if(ulgowe % 15 == 0){
-    cenaNormalnych -= 10
-  }
-  let cena = cenaNormalnych + cenaUlgowych
+//   let cenaNormalnych = normalne * 10 * godziny
+//   let cenaUlgowych = ulgowe * 5 * godziny
+//   if(godziny > 4){
+//     cenaNormalnych = 50
+//     cenaUlgowych = 25
+//   }
+//   if(ulgowe % 15 == 0){
+//     cenaNormalnych -= 10
+//   }
+//   let cena = cenaNormalnych + cenaUlgowych
   
-  if(kartaRodziny.checked){
-    cena *= 0.9
-  }
-  wynik.textContent = cena
-}
+//   if(kartaRodziny.checked){
+//     cena *= 0.9
+//   }
+//   wynik.textContent = cena
+// }
 
-button.addEventListener('click', oblicz)
+// button.addEventListener('click', oblicz)
